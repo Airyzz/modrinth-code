@@ -350,7 +350,6 @@ onBeforeUnmount(() => {
 	z-index: 9;
 	width: 20rem;
 	background-color: var(--color-raised-bg);
-	box-shadow: var(--shadow-raised);
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -449,7 +448,6 @@ onBeforeUnmount(() => {
 	right: 0.5rem;
 	z-index: 9;
 	background-color: var(--color-raised-bg);
-	box-shadow: var(--shadow-raised);
 	display: flex;
 	flex-direction: column;
 	overflow: auto;

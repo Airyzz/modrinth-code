@@ -541,10 +541,7 @@ Button {
 		transition: all ease-in-out 0.1s;
 		width: 100%;
 		color: var(--color-primary);
-		box-shadow: none;
-
 		&.router-link-exact-active {
-			box-shadow: var(--shadow-inset-lg);
 			background: var(--color-button-bg);
 			color: var(--color-contrast);
 		}
@@ -552,7 +549,6 @@ Button {
 		&:hover {
 			background-color: var(--color-button-bg);
 			color: var(--color-contrast);
-			box-shadow: var(--shadow-inset-lg);
 			text-decoration: none;
 		}
 

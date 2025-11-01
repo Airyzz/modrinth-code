@@ -118,7 +118,6 @@ onBeforeUnmount(() => {
 .context-menu {
 	background-color: var(--color-raised-bg);
 	border-radius: var(--radius-md);
-	box-shadow: var(--shadow-floating);
 	border: 1px solid var(--color-button-bg);
 	margin: 0;
 	position: fixed;

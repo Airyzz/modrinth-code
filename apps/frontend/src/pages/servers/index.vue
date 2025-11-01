@@ -34,7 +34,7 @@
 			<div class="z-[5] flex w-full flex-col gap-8">
 				<div class="flex flex-col gap-4">
 					<div
-						class="relative h-fit w-fit rounded-full bg-highlight-green px-3 py-1 text-sm font-bold text-brand backdrop-blur-lg"
+						class="relative h-fit w-fit rounded-full bg-highlight-green px-3 py-1 text-sm font-bold text-brand -lg"
 					>
 						{{ formatMessage(commonMessages.betaRelease) }}
 					</div>
@@ -107,7 +107,7 @@
 			<div class="faded-brand-line absolute left-0 top-0 h-[1px] w-full"></div>
 			<div class="relative mx-auto flex w-full max-w-7xl flex-col gap-8">
 				<div
-					class="relative w-fit rounded-full bg-highlight-green px-3 py-1 text-sm font-bold text-brand backdrop-blur-lg"
+					class="relative w-fit rounded-full bg-highlight-green px-3 py-1 text-sm font-bold text-brand -lg"
 				>
 					Why Modrinth Servers?
 				</div>
@@ -236,7 +236,7 @@
 			<div class="faded-brand-line absolute left-0 top-0 h-[1px] w-full"></div>
 			<div class="relative mx-auto flex w-full max-w-7xl flex-col gap-8">
 				<div
-					class="relative w-fit rounded-full bg-highlight-green px-3 py-1 text-sm font-bold text-brand backdrop-blur-lg"
+					class="relative w-fit rounded-full bg-highlight-green px-3 py-1 text-sm font-bold text-brand -lg"
 				>
 					Included with your server
 				</div>
@@ -319,7 +319,7 @@
 							border: 1px solid rgba(12, 107, 52, 0.55);
 							box-shadow: 0px 12px 38.1px rgba(27, 217, 106, 0.13);
 						"
-						class="relative flex flex-col gap-4 overflow-hidden rounded-2xl p-6 text-left sm:backdrop-blur-xl md:p-12"
+						class="relative flex flex-col gap-4 overflow-hidden rounded-2xl p-6 text-left sm:-xl md:p-12"
 					>
 						<h2 class="m-0 text-lg font-bold">Easy to use file manager</h2>
 						<h3 class="m-0 text-base font-normal">
@@ -637,19 +637,19 @@
 
 <script setup>
 import {
-	BoxIcon,
-	GameIcon,
-	RightArrowIcon,
-	ServerIcon,
-	TerminalSquareIcon,
-	TransferIcon,
-	VersionIcon,
+    BoxIcon,
+    GameIcon,
+    RightArrowIcon,
+    ServerIcon,
+    TerminalSquareIcon,
+    TransferIcon,
+    VersionIcon,
 } from '@modrinth/assets'
 import {
-	ButtonStyled,
-	commonMessages,
-	injectNotificationManager,
-	ModrinthServersPurchaseModal,
+    ButtonStyled,
+    commonMessages,
+    injectNotificationManager,
+    ModrinthServersPurchaseModal,
 } from '@modrinth/ui'
 import { monthsInInterval } from '@modrinth/ui/src/utils/billing.ts'
 import { formatPrice } from '@modrinth/utils'

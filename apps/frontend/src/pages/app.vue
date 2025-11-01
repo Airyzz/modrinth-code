@@ -506,7 +506,7 @@ useSeoMeta({
 	<div>
 		<div class="landing-hero">
 			<div
-				class="relative mt-4 h-fit w-fit rounded-full bg-highlight-green px-3 py-1 text-sm font-bold text-brand backdrop-blur-lg"
+				class="relative mt-4 h-fit w-fit rounded-full bg-highlight-green px-3 py-1 text-sm font-bold text-brand -lg"
 			>
 				{{ formatMessage(commonMessages.betaRelease) }}
 			</div>
@@ -1913,16 +1913,6 @@ useSeoMeta({
 		.feature {
 			padding: var(--gap-xl);
 			z-index: 1;
-			background: radial-gradient(
-				50% 50% at 50% 50%,
-				rgba(44, 48, 79, 0.35) 0%,
-				rgba(32, 35, 50, 0.27) 100%
-			);
-			box-shadow:
-				2px 2px 12px 0px rgba(0, 0, 0, 0.16),
-				2px 2px 64px 0px rgba(57, 61, 94, 0.45) inset;
-			backdrop-filter: blur(6px);
-			-webkit-backdrop-filter: blur(6px);
 			max-width: 540px;
 			width: 100%;
 			overflow: hidden;

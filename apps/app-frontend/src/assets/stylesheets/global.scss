@@ -137,24 +137,11 @@ input {
 	background-clip: content-box;
 }
 
-.highlighted {
-	box-shadow: 0 0 1rem var(--color-brand) !important;
-}
-
-.gecko {
-	background-color: var(--color-raised-bg);
-	box-shadow: none !important;
-}
-
 img {
 	user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-}
-
-.card-shadow {
-	box-shadow: var(--shadow-card);
 }
 
 @import '@modrinth/assets/omorphia.scss';
