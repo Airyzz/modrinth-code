@@ -29,10 +29,9 @@ import {
 	ButtonStyled,
 	commonMessages,
 	NewsArticleCard,
-	NotificationPanel,
 	OverflowMenu,
 	ProgressSpinner,
-	provideNotificationManager,
+	provideNotificationManager
 } from '@modrinth/ui'
 import { renderString } from '@modrinth/utils'
 import { getVersion } from '@tauri-apps/api/app'
@@ -50,11 +49,7 @@ import ModrinthAppLogo from '@/assets/modrinth_app.svg?component'
 import ModrinthLoadingIndicator from '@/components/LoadingIndicatorBar.vue'
 import AccountsCard from '@/components/ui/AccountsCard.vue'
 import Breadcrumbs from '@/components/ui/Breadcrumbs.vue'
-import ErrorModal from '@/components/ui/ErrorModal.vue'
 import FriendsList from '@/components/ui/friends/FriendsList.vue'
-import IncompatibilityWarningModal from '@/components/ui/install_flow/IncompatibilityWarningModal.vue'
-import InstallConfirmModal from '@/components/ui/install_flow/InstallConfirmModal.vue'
-import ModInstallModal from '@/components/ui/install_flow/ModInstallModal.vue'
 import InstanceCreationModal from '@/components/ui/InstanceCreationModal.vue'
 import AppSettingsModal from '@/components/ui/modal/AppSettingsModal.vue'
 import AuthGrantFlowWaitModal from '@/components/ui/modal/AuthGrantFlowWaitModal.vue'
@@ -64,7 +59,6 @@ import QuickInstanceSwitcher from '@/components/ui/QuickInstanceSwitcher.vue'
 import RunningAppBar from '@/components/ui/RunningAppBar.vue'
 import SplashScreen from '@/components/ui/SplashScreen.vue'
 import UpdateToast from '@/components/ui/UpdateToast.vue'
-import URLConfirmModal from '@/components/ui/URLConfirmModal.vue'
 import { useCheckDisableMouseover } from '@/composables/macCssFix.js'
 import { hide_ads_window, init_ads_window, show_ads_window } from '@/helpers/ads.js'
 import { debugAnalytics, initAnalytics, optOutAnalytics, trackEvent } from '@/helpers/analytics'
@@ -196,7 +190,7 @@ async function setupApp() {
 
 	themeStore.setThemeState(theme)
 	themeStore.collapsedNavigation = collapsed_navigation
-	themeStore.advancedRendering = advanced_rendering
+	themeStore.advancedRendering = false;
 	themeStore.toggleSidebar = toggle_sidebar
 	themeStore.devMode = developer_mode
 	themeStore.featureFlags = feature_flags
@@ -709,7 +703,7 @@ provideAppUpdateDownloadProgress(appUpdateDownload)
 			<div
 				v-if="restarting"
 				data-tauri-drag-region
-				class="inset-0 fixed bg-black/80 backdrop-blur z-[200] flex items-center justify-center"
+				class="inset-0 fixed bg-black/80  z-[200] flex items-center justify-center"
 			>
 				<span
 					data-tauri-drag-region
@@ -920,7 +914,7 @@ provideAppUpdateDownloadProgress(appUpdateDownload)
 			<transition name="popup-survey">
 				<div
 					v-if="availableSurvey"
-					class="w-[400px] z-20 fixed -bottom-12 pb-16 right-[--right-bar-width] mr-4 rounded-t-2xl card-shadow bg-bg-raised border-divider border-[1px] border-solid border-b-0 p-4"
+					class="w-[400px] z-20 fixed -bottom-12 pb-16 right-[--right-bar-width] mr-4 rounded-t-2xl bg-bg-raised border-divider border-[1px] border-solid border-b-0 p-4"
 				>
 					<h2 class="text-lg font-extrabold mt-0 mb-2">Hey there Modrinth user!</h2>
 					<p class="m-0 leading-tight">
@@ -1196,7 +1190,6 @@ provideAppUpdateDownloadProgress(appUpdateDownload)
 
 .app-sidebar::before {
 	content: '';
-	box-shadow: -15px 0 15px -15px rgba(0, 0, 0, 0.2) inset;
 	top: 0;
 	bottom: 0;
 	left: -2rem;
@@ -1221,9 +1214,6 @@ provideAppUpdateDownloadProgress(appUpdateDownload)
 	right: calc(-1 * var(--left-bar-width));
 	bottom: calc(-1 * var(--left-bar-width));
 	border-radius: var(--radius-xl);
-	box-shadow:
-		1px 1px 15px rgba(0, 0, 0, 0.2) inset,
-		inset 1px 1px 1px rgba(255, 255, 255, 0.23);
 	pointer-events: none;
 }
 

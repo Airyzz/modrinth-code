@@ -53,7 +53,7 @@ defineOptions({
 .router-link-active,
 .subpage-active {
 	svg {
-		filter: drop-shadow(0 0 0.5rem black);
+
 	}
 }
 
