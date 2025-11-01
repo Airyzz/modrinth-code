@@ -1030,6 +1030,12 @@ provideAppUpdateDownloadProgress(appUpdateDownload)
 			</template>
 		</div>
 	</div>
+	<URLConfirmModal ref="urlModal" />
+	<NotificationPanel has-sidebar />
+	<ErrorModal ref="errorModal" />
+	<ModInstallModal ref="modInstallModal" />
+	<IncompatibilityWarningModal ref="incompatibilityWarningModal" />
+	<InstallConfirmModal ref="installConfirmModal" />
 </template>
 
 <style lang="scss" scoped>
